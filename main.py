@@ -1,5 +1,6 @@
 #!/usr/bin/python
-from sys import argv
+
+#from sys import argv (Not needed for the module)
 
 # Currently the only possible value when using the impostor custom server
 SERVER_SUFFIX = "-Master-1"
@@ -82,7 +83,7 @@ def content_from_stream(stream: bytearray) -> str:
         hex_array.append(hex(byte))
     return f"{{{', '.join(hex_array)}}}"
 
-
+"""
 if __name__ == "__main__":
     if len(argv) < 2:
         print('Usage: python main.py <name> [ip-address] [file-name] [port]')
@@ -96,3 +97,4 @@ if __name__ == "__main__":
     except Exception as error:
         print("Error:", error)
         exit(1)
+        """ #Used in original for getting arguments and calling write_file function
